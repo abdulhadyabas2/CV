@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #a99607;
-            --secondary: #d1d405;
+            --primary: #022553;
+            --secondary: #0954eb;
             --accent: #e74c3c;
             --light: #ecf0f1;
             --dark: #2c3e50;
@@ -44,7 +44,91 @@
     background: #fff8e6;
     border-color: #ffecb3;
 }
+/* Conference Section */
+#conference .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
 
+.conf-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.conf-card {
+    background: #fff;
+    border-left: 4px solid #4285f4;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conf-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.conf-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.conf-authors {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.conf-author-bold {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.conf-details > div {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.conf-details i {
+    margin-right: 10px;
+    min-width: 18px;
+    color: #4285f4;
+}
+
+.conf-publisher {
+    font-style: italic;
+}
+
+.conf-extra {
+    padding: 8px 12px;
+    background: #e8f0fe;
+    border-radius: 4px;
+    margin-top: 10px;
+    display: inline-flex;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .conf-card {
+        padding: 20px 15px;
+    }
+    
+    .conf-title {
+        font-size: 1.1rem;
+    }
+}
 .hf-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -763,7 +847,104 @@
                 justify-content: center;
             }
         }
-        
+        /* Header Styles */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 25px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-content {
+    flex: 1;
+}
+
+.name-title {
+    margin-bottom: 15px;
+}
+
+.name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.title {
+    font-size: 1.4rem;
+    color: #4285f4;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-item i {
+    color: #4285f4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .contact-info {
+        justify-content: center;
+    }
+    
+    .name {
+        font-size: 1.8rem;
+    }
+    
+    .title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+}
         @media (max-width: 480px) {
             .name {
                 font-size: 1.8rem;
@@ -809,30 +990,36 @@
 <body>
     <div class="cv-container">
         <div class="decoration"></div>
+      <header>
+    <div class="profile-header">
+        <!-- Profile Photo -->
+        <div class="profile-photo">
+            <img src="a.png" alt="Abdulhady Abas Abdullah">
+        </div>
         
-        <header>
-            <div class="profile-header">
-                <div class="name-title">
-                    <h1 class="name">Abdulhady Abas Abdullah, M.Sc.</h1>
-                    <div class="title">Research Professional in Artificial Intelligence</div>
+        <div class="header-content">
+            <div class="name-title">
+                <h1 class="name">Abdulhady Abas Abdullah, M.Sc.</h1>
+                <div class="title">Research Professional in Artificial Intelligence</div>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Erbil, Kurdistan Region, Iraq</span>
                 </div>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Erbil, Kurdistan Region, Iraq</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>abdulhady.abas@ukh.edu.krd</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+964 751-884-8928</span>
-                    </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>abdulhady.abas@ukh.edu.krd</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+964 751-884-8928</span>
                 </div>
             </div>
-        </header>
+        </div>
+    </div>
+</header>
         
         <section id="summary">
             <div class="section-header">
@@ -1219,7 +1406,79 @@
     </div>
 </section>
 
-
+<section id="conference">
+    <div class="section-header">
+        <h2><i class="fas fa-presentation"></i> Conference Proceedings</h2>
+        <i class="fas fa-users section-icon"></i>
+    </div>
+    <div class="section-content">
+        <div class="conf-container">
+            <!-- Conference 1 -->
+            <div class="conf-card">
+                <div class="conf-title">Machine Learning for Recruitment: Analyzing Job-Matching Algorithms</div>
+                <div class="conf-authors">Aram K. Jirjees, <span class="conf-author-bold">Abdulhady Abas Abdullah</span>, Ahmed M. Ahmed, Tarik A. Rashid</div>
+                <div class="conf-details">
+                    <div class="conf-venue">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Leeds School of Engineering Conference, Leeds Beckett University, United Kingdom</span>
+                    </div>
+                    <div class="conf-date">
+                        <i class="far fa-calendar"></i>
+                        <span>2025</span>
+                    </div>
+                    <div class="conf-publisher">
+                        <i class="fas fa-book-open"></i>
+                        <span>Engineering Proceedings Journal</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conference 2 -->
+            <div class="conf-card">
+                <div class="conf-title">Criminal Evidence in Artificial Intelligence</div>
+                <div class="conf-authors"><span class="conf-author-bold">Abdulhady Abas Abdullah</span>, Dana A. Abdullah, Ismail Y. Maolood</div>
+                <div class="conf-details">
+                    <div class="conf-venue">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>3rd International Conference on Emerging Legal Issues, Leeds Law School, Leeds Beckett University</span>
+                    </div>
+                    <div class="conf-date">
+                        <i class="far fa-calendar"></i>
+                        <span>2025</span>
+                    </div>
+                    <div class="conf-publisher">
+                        <i class="fas fa-book-open"></i>
+                        <span>Legal Tech Review Proceedings</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conference 3 -->
+            <div class="conf-card">
+                <div class="conf-title">Unveiling Public Service and Prosocial Motivation Through Machine Learning Insights</div>
+                <div class="conf-authors">Jalal Kabber, <span class="conf-author-bold">Abdulhady Abas Abdullah</span>, Ahmed M. Ahmed, Tarik A. Rashid</div>
+                <div class="conf-details">
+                    <div class="conf-venue">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>2025 International Conference on Computer Science and Software Engineering (CSASE)</span>
+                    </div>
+                    <div class="conf-date">
+                        <i class="far fa-calendar"></i>
+                        <span>2025</span>
+                    </div>
+                    <div class="conf-publisher">
+                        <i class="fas fa-book-open"></i>
+                        <span>IEEE Conference Proceedings</span>
+                    </div>
+                    <div class="conf-extra">
+                        <i class="fas fa-trophy"></i>
+                        <span>Published in IEEE Xplore Digital Library</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section id="huggingface">
     <div class="section-header">
         <h2><i class="fab fa-hubspot"></i> Hugging Face Projects</h2>
