@@ -18,7 +18,93 @@
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
-        
+        /* Hugging Face Section */
+#huggingface .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.hf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.hf-card {
+    background: #f8f9fa;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.hf-card.private {
+    background: #fff8e6;
+    border-color: #ffecb3;
+}
+
+.hf-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.hf-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+}
+
+.hf-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.hf-task {
+    background: #e3f2fd;
+    color: #0d47a1;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    width: fit-content;
+    font-weight: 500;
+}
+
+.hf-size, .hf-updated {
+    color: #555;
+}
+
+.hf-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #777;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.private-badge {
+    background: #fff3cd;
+    color: #856404;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hf-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
         * {
             margin: 0;
             padding: 0;
@@ -1127,6 +1213,250 @@
                 <div class="pub-details">
                     <span>Under review at Neural Networks</span>
                     <span class="pub-status status-review">Under Review (First author)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="huggingface">
+    <div class="section-header">
+        <h2><i class="fab fa-hubspot"></i> Hugging Face Projects</h2>
+        <i class="fas fa-microchip section-icon"></i>
+    </div>
+    <div class="section-content">
+        <div class="hf-grid">
+            <!-- Row 1 -->
+            <div class="hf-card">
+                <div class="hf-title">RoBERTa-large-SizeCorpus_1B</div>
+                <div class="hf-details">
+                    <span class="hf-task">Feature Extraction</span>
+                    <span class="hf-size">0.1B params</span>
+                    <span class="hf-updated">Updated: Mar 28, 2025</span>
+                </div>
+                <div class="hf-meta">
+                    <span class="hf-downloads">9 downloads</span>
+                </div>
+            </div>
+
+            <div class="hf-card">
+                <div class="hf-title">NER-FineTuing-RoBERTa</div>
+                <div class="hf-details">
+                    <span class="hf-task">Token Classification</span>
+                    <span class="hf-size">0.1B params</span>
+                    <span class="hf-updated">Updated: Nov 8, 2024</span>
+                </div>
+            </div>
+
+            <div class="hf-card">
+                <div class="hf-title">kurdishRoBERTa-language-detector-1B</div>
+                <div class="hf-details">
+                    <span class="hf-task">Text Classification</span>
+                    <span class="hf-size">0.1B params</span>
+                    <span class="hf-updated">Updated: Nov 7, 2024</span>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="hf-card">
+                <div class="hf-title">fine-tuned-MarianMTKurdish</div>
+                <div class="hf-details">
+                    <span class="hf-task">Translation</span>
+                    <span class="hf-size">0.1B params</span>
+                    <span class="hf-updated">Updated: Oct 26, 2024</span>
+                </div>
+                <div class="hf-meta">
+                    <span class="hf-downloads">1 download</span>
+                </div>
+            </div>
+
+            <div class="hf-card">
+                <div class="hf-title">roberta-finetuned-sst2</div>
+                <div class="hf-details">
+                    <span class="hf-task">Text Classification</span>
+                    <span class="hf-updated">Updated: Oct 25, 2024</span>
+                </div>
+            </div>
+
+            <div class="hf-card">
+                <div class="hf-title">KuBERT</div>
+                <div class="hf-details">
+                    <span class="hf-task">Fill-Mask</span>
+                    <span class="hf-size">0.1B params</span>
+                    <span class="hf-updated">Updated: Jul 22, 2024</span>
+                </div>
+                <div class="hf-meta">
+                    <span class="hf-downloads">9 downloads</span>
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="hf-card private">
+                <div class="hf-title">idiom_bert_kurdish <span class="private-badge">Private</span></div>
+                <div class="hf-details">
+                    <span class="hf-task">Feature Extraction</span>
+                    <span class="hf-size">0.1B params</span>
+                    <span class="hf-updated">Updated: Jul 13, 2024</span>
+                </div>
+            </div>
+
+            <div class="hf-card private">
+                <div class="hf-title">idiom_bert_ckb <span class="private-badge">Private</span></div>
+                <div class="hf-details">
+                    <span class="hf-task">Text Classification</span>
+                    <span class="hf-size">0.1B params</span>
+                    <span class="hf-updated">Updated: Jul 13, 2024</span>
+                </div>
+            </div>
+
+            <div class="hf-card private">
+                <div class="hf-title">RoBERTa_CKB_300M_token_model <span class="private-badge">Private</span></div>
+                <div class="hf-details">
+                    <span class="hf-task">Feature Extraction</span>
+                    <span class="hf-size">0.1B params</span>
+                    <span class="hf-updated">Updated: Apr 16, 2024</span>
+                </div>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="hf-card private">
+                <div class="hf-title">TTS <span class="private-badge">Private</span></div>
+                <div class="hf-details">
+                    <span class="hf-task">Text-to-Audio</span>
+                    <span class="hf-updated">Updated: Mar 4, 2024</span>
+                </div>
+            </div>
+
+            <div class="hf-card">
+                <div class="hf-title">RoBERTa_CKB_300M_token</div>
+                <div class="hf-details">
+                    <span class="hf-task">Feature Extraction</span>
+                    <span class="hf-updated">Updated: Feb 25, 2024</span>
+                </div>
+            </div>
+
+            <div class="hf-card">
+                <div class="hf-title">EsperBERTo</div>
+                <div class="hf-details">
+                    <span class="hf-task">Fill-Mask</span>
+                    <span class="hf-size">0.1B params</span>
+                    <span class="hf-updated">Updated: Feb 19, 2024</span>
+                </div>
+                <div class="hf-meta">
+                    <span class="hf-downloads">2 downloads</span>
+                </div>
+            </div>
+
+            <!-- Row 5 -->
+            <div class="hf-card private">
+                <div class="hf-title">whisper-ckb-large-v3_checkpoint-75000 <span class="private-badge">Private</span></div>
+                <div class="hf-details">
+                    <span class="hf-task">Automatic Speech Recognition</span>
+                    <span class="hf-size">2B params</span>
+                    <span class="hf-updated">Updated: Feb 19, 2024</span>
+                </div>
+            </div>
+
+            <div class="hf-card private">
+                <div class="hf-title">whisper-ckb-large-v3_checkpoint-60000 <span class="private-badge">Private</span></div>
+                <div class="hf-details">
+                    <span class="hf-task">Automatic Speech Recognition</span>
+                    <span class="hf-size">2B params</span>
+                    <span class="hf-updated">Updated: Feb 18, 2024</span>
+                </div>
+            </div>
+
+            <div class="hf-card private">
+                <div class="hf-title">whisper-ckb-large-v3 <span class="private-badge">Private</span></div>
+                <div class="hf-details">
+                    <span class="hf-task">Automatic Speech Recognition</span>
+                    <span class="hf-size">2B params</span>
+                    <span class="hf-updated">Updated: Feb 17, 2024</span>
+                </div>
+            </div>
+
+            <!-- Row 6 -->
+            <div class="hf-card private">
+                <div class="hf-title">whisper-large-kmr-v2-7000 <span class="private-badge">Private</span></div>
+                <div class="hf-details">
+                    <span class="hf-task">Automatic Speech Recognition</span>
+                    <span class="hf-updated">Updated: Jan 21, 2024</span>
+                </div>
+            </div>
+
+            <div class="hf-card private">
+                <div class="hf-title">whisper-large-kmr-v3 <span class="private-badge">Private</span></div>
+                <div class="hf-details">
+                    <span class="hf-task">Automatic Speech Recognition</span>
+                    <span class="hf-updated">Updated: Jan 13, 2024</span>
+                </div>
+            </div>
+
+            <div class="hf-card private">
+                <div class="hf-title">whisper-hawrami-large-v2 <span class="private-badge">Private</span></div>
+                <div class="hf-details">
+                    <span class="hf-task">Automatic Speech Recognition</span>
+                    <span class="hf-updated">Updated: Dec 8, 2023</span>
+                </div>
+            </div>
+
+            <!-- Row 7 -->
+            <div class="hf-card">
+                <div class="hf-title">whisper-small-hawrami</div>
+                <div class="hf-details">
+                    <span class="hf-task">Automatic Speech Recognition</span>
+                    <span class="hf-updated">Updated: Dec 5, 2023</span>
+                </div>
+            </div>
+
+            <div class="hf-card private">
+                <div class="hf-title">checkpoint-56000-ckb <span class="private-badge">Private</span></div>
+                <div class="hf-details">
+                    <span class="hf-task">Automatic Speech Recognition</span>
+                    <span class="hf-updated">Updated: Nov 4, 2023</span>
+                </div>
+            </div>
+
+            <div class="hf-card private">
+                <div class="hf-title">whisper-large-v2-ckb40000 <span class="private-badge">Private</span></div>
+                <div class="hf-details">
+                    <span class="hf-task">Automatic Speech Recognition</span>
+                    <span class="hf-updated">Updated: Oct 6, 2023</span>
+                </div>
+            </div>
+
+            <!-- Row 8 -->
+            <div class="hf-card private">
+                <div class="hf-title">whisper-large-v2-ckb30000 <span class="private-badge">Private</span></div>
+                <div class="hf-details">
+                    <span class="hf-task">Automatic Speech Recognition</span>
+                    <span class="hf-updated">Updated: Oct 3, 2023</span>
+                </div>
+            </div>
+
+            <div class="hf-card private">
+                <div class="hf-title">whisper-large-v2-ckb20000 <span class="private-badge">Private</span></div>
+                <div class="hf-details">
+                    <span class="hf-task">Automatic Speech Recognition</span>
+                    <span class="hf-updated">Updated: Oct 2, 2023</span>
+                </div>
+            </div>
+
+            <div class="hf-card private">
+                <div class="hf-title">whisper-large-v2-ckb <span class="private-badge">Private</span></div>
+                <div class="hf-details">
+                    <span class="hf-task">Automatic Speech Recognition</span>
+                    <span class="hf-updated">Updated: Sep 29, 2023</span>
+                </div>
+            </div>
+
+            <!-- Row 9 -->
+            <div class="hf-card">
+                <div class="hf-title">whisperss-medium-ckb</div>
+                <div class="hf-details">
+                    <span class="hf-task">Automatic Speech Recognition</span>
+                    <span class="hf-updated">Updated: Sep 28, 2023</span>
                 </div>
             </div>
         </div>
