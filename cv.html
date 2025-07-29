@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdulhady Abas Abdullah - Academic CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #a99607;
+            --secondary: #d1d405;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --gray: #95a5a6;
+            --light-gray: #f8f9fa;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            padding: 20px;
+        }
+        
+        .cv-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: var(--shadow);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .decoration {
+            position: absolute;
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            top: 0;
+            left: 0;
+            z-index: 0;
+            border-bottom-left-radius: 50% 20%;
+            border-bottom-right-radius: 50% 20%;
+        }
+        
+        header {
+            padding: 60px 40px 30px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .profile-header {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .name-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .name {
+            font-family: 'Roboto Slab', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .name:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        .title {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-top: 15px;
+            color: var(--secondary);
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.05rem;
+            background: var(--light);
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+        
+        .contact-item i {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+        
+        section {
+            padding: 40px;
+            position: relative;
+        }
+        
+        section:nth-child(even) {
+            background-color: var(--light-gray);
+        }
+        
+        h2 {
+            font-family: 'Roboto Slab', serif;
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--secondary);
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 i {
+            margin-right: 15px;
+            color: var(--secondary);
+            background: rgba(52, 152, 219, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .section-content {
+            margin-left: 20px;
+        }
+        
+        .summary {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--accent);
+        }
+        
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        
+        .interest-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--secondary);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .interest-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--secondary);
+        }
+        
+        .interest-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .interest-card h3 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .timeline {
+            position: relative;
+            margin-left: 30px;
+            padding-left: 30px;
+            border-left: 3px solid var(--secondary);
+        }
+        
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--secondary);
+            border: 3px solid white;
+        }
+        
+        .timeline-date {
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .timeline-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        
+        .timeline-subtitle {
+            font-style: italic;
+            margin-bottom: 15px;
+            color: var(--gray);
+            display: inline-block;
+            padding: 3px 10px;
+            background: rgba(149, 165, 166, 0.1);
+            border-radius: 4px;
+        }
+        
+        .publications-container {
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 15px;
+        }
+        
+        .publications-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .publications-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        .publications-container::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+            border-radius: 4px;
+        }
+        
+        .pub-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        
+        .pub-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .pub-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark);
+            font-size: 1.05rem;
+        }
+        
+        .pub-authors {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            color: #555;
+            font-style: italic;
+        }
+        
+        .pub-author-bold {
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .pub-details {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--gray);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .pub-status {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .status-published {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #a5d6a7;
+        }
+        
+        .status-review {
+            background: #fff8e1;
+            color: #f57f17;
+            border: 1px solid #ffd54f;
+        }
+        
+        .status-preprint {
+            background: #e3f2fd;
+            color: #1565c0;
+            border: 1px solid #90caf9;
+        }
+        
+        .awards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .award-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border: 1px solid #eee;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .award-card:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
+        }
+        
+        .award-icon {
+            font-size: 2.8rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .award-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .award-year {
+            color: var(--gray);
+            font-size: 1rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .languages {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .language-item {
+            background: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .language-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .language-item i {
+            color: var(--secondary);
+            font-size: 1.2rem;
+        }
+        
+        .references {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        
+        .reference-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border: 1px solid #eee;
+            position: relative;
+        }
+        
+        .reference-card:before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 5rem;
+            color: rgba(52, 152, 219, 0.1);
+            font-family: serif;
+            line-height: 1;
+        }
+        
+        .ref-name {
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .ref-title {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: var(--gray);
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .ref-email {
+            color: var(--secondary);
+            font-size: 1rem;
+            word-break: break-all;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            min-width: 180px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: var(--gray);
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .section-icon {
+            font-size: 2rem;
+            color: var(--secondary);
+            opacity: 0.3;
+        }
+        
+        .citation-stats {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .citation-stat {
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .citation-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        
+        .citation-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .accounts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .account-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border: 1px solid #eee;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .account-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
+        }
+        
+        .account-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .account-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .account-title {
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .account-link {
+            color: var(--secondary);
+            font-size: 0.95rem;
+            word-break: break-all;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            transition: var(--transition);
+        }
+        
+        .account-link:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        
+        .account-description {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 10px;
+        }
+        
+        .google-scholar { color: #4285F4; }
+        .linkedin { color: #0A66C2; }
+        .orcid { color: #A6CE39; }
+        .huggingface { color: #FFD21E; }
+        .github { color: #333; }
+        
+        @media (max-width: 900px) {
+            .cv-container {
+                max-width: 95%;
+            }
+            
+            header {
+                padding: 40px 20px 20px;
+            }
+            
+            .profile-header {
+                padding: 20px;
+            }
+            
+            .name {
+                font-size: 2.2rem;
+            }
+            
+            .title {
+                font-size: 1.2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .contact-item {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            section {
+                padding: 30px 20px;
+            }
+            
+            .interests-grid, .awards-container, .references, .accounts-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .languages {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .language-item {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .name {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            h2 i {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            
+            .stat-card {
+                min-width: 140px;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--primary);
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <div class="decoration"></div>
+        
+        <header>
+            <div class="profile-header">
+                <div class="name-title">
+                    <h1 class="name">Abdulhady Abas Abdullah, M.Sc.</h1>
+                    <div class="title">Research Professional in Artificial Intelligence</div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Erbil, Kurdistan Region, Iraq</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>abdulhady.abas@ukh.edu.krd</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+964 751-884-8928</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <section id="summary">
+            <div class="section-header">
+                <h2><i class="fas fa-user"></i> Professional Summary</h2>
+                <i class="fas fa-star section-icon"></i>
+            </div>
+            <div class="section-content">
+                <div class="summary" style="text-align: justify;">
+                 A motivated research professional with a Master's degree in Artificial Intelligence and over three years of research experience in speech, language, and multimodal processing. Currently a Research Assistant in AI, I co-developed the first end-to-end Automatic Speech Recognition (ASR) and Text-to-Speech (TTS) systems for Kurdish. Author or co-author of 20+ research papers in areas spanning deep learning, natural language processing, and Large Language Models (LLMs).* My current research focuses on LLM optimization, prompt engineering, vision-language models (VLMs), Audio LLMs, and multimodal AI systems. </div>
+                
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Publications</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Awards Won</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">170+</div>
+                        <div class="stat-label">Hours Speech Corpus</div>
+                    </div>
+                </div>
+                
+                <div class="citation-stats">
+                    <div class="citation-stat">
+                        <div class="citation-number">12</div>
+                        <div class="citation-label">Total Citations</div>
+                    </div>
+                    <div class="citation-stat">
+                        <div class="citation-number">10</div>
+                        <div class="citation-label">h-index</div>
+                    </div>
+                    <div class="citation-stat">
+                        <div class="citation-number">10</div>
+                        <div class="citation-label">i10-index</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="interests">
+        <div class="section-header">
+            <h2><i class="fas fa-lightbulb"></i> Research Interests & Focus</h2>
+            <i class="fas fa-brain section-icon"></i>
+        </div>
+        <div class="section-content">
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <h3>Multilingual NLP & LLMs</h3>
+                    <p>Optimizing large language models (LLMs) for low-resource and multilingual applications.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Deep Learning & Transformers</h3>
+                    <p>Efficient architectures, fine-tuning, and prompt engineering for NLP tasks.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Speech & Multimodal AI</h3>
+                    <p>End-to-end ASR, Audio LLMs, and vision-language models (VLMs).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+        <section id="education">
+            <div class="section-header">
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                <i class="fas fa-book-open section-icon"></i>
+            </div>
+            <div class="section-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020–2022</div>
+                        <div class="timeline-title">M.Sc. in Artificial Intelligence</div>
+                        <div class="timeline-subtitle">Soran University – Erbil, Iraq</div>
+                        <p>Thesis: "Kurdish Speech Recognition using Deep Learning"</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2016–2019</div>
+                        <div class="timeline-title">B.Sc. in Computer Science – Hardware</div>
+                        <div class="timeline-subtitle">Soran University – Erbil, Iraq</div>
+                        <p>Senior Project: "Design and Implementation of a Real Estate Web and Mobile Application"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="experience">
+            <div class="section-header">
+                <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+                <i class="fas fa-laptop-code section-icon"></i>
+            </div>
+            <div class="section-content">
+                <div class="timeline">
+                    <div class="timeline-item" style="text-align: justify;">
+                        <div class="timeline-date">2024–Present</div>
+                        <div class="timeline-title">Research Assistant in Artificial Intelligence</div>
+                        <div class="timeline-subtitle">Artificial Intelligence and Innovation Centre (AIIC), University of Kurdistan Hewlêr (UKH), Erbil, Iraq</div>
+                        <p>
+                            Conducting cutting-edge research in AI, specializing in <strong>speech processing, multilingual NLP, and Large Language Models (LLMs)</strong>.  
+                            Developed the first end-to-end <strong>Automatic Speech Recognition (ASR) and Text-to-Speech (TTS) systems for Kurdish</strong>, bridging gaps in low-resource language technology.  
+                            Research focuses on <strong>LLM optimization, prompt engineering, and adapting transformer models for Kurdish and other under-resourced languages</strong>.  
+                            Collaborates with interdisciplinary teams to publish findings in high-impact conferences and journals.  
+                        </p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019–2022</div>
+                        <div class="timeline-title">Graduate Researcher (NLP/Speech Group)</div>
+                        <div class="timeline-subtitle">Soran University & AsoSoft Research Team</div>
+                        <p>Key R&D contributions in Kurdish language technologies:
+                            <ul style="margin-left: 20px; margin-top: 10px;">
+                                <li>Developed the first end-to-end ASR and TTS systems for Kurdish using deep learning</li>
+                                <li>Created the first large-scale Kurdish speech corpus (170 hours) and text corpus (3M+ tokens)</li>
+                                <li>Built the first large language model for Kurdish (CKB)</li>
+                                <li>Developed OCR and handwriting recognition systems for Kurdish using modern deep learning architectures</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+      <section id="publications">
+    <div class="section-header">
+        <h2><i class="fas fa-book"></i> Publications (Google Scholar)</h2>
+        <i class="fas fa-file-alt section-icon"></i>
+    </div>
+    <div class="section-content">
+        <div class="publications-container">
+            <!-- Published Papers (2025) -->
+            <div class="pub-card">
+                <div class="pub-title">Sentiment analysis in low-resource contexts: BERT’s impact on Central Kurdish</div>
+                <div class="pub-authors">KM Awlla, H Veisi, <span class="pub-author-bold">Abdulhady Abas Abdullah</span></div>
+                <div class="pub-details">
+                    <span>Language Resources and Evaluation, 2025</span>
+                    <span class="pub-status status-published">Published (Co-author, 3rd)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">Machine Learning for Recruitment: Analyzing Job-Matching Algorithms</div>
+                <div class="pub-authors">AK Jirjees, AM Ahmed, <span class="pub-author-bold">Abdulhady Abas Abdullah</span>, J Lu, EM Noori, RN Kareem</div>
+                <div class="pub-details">
+                    <span>Machine Learning 27, 1, 2025</span>
+                    <span class="pub-status status-published">Published (Co-author, 3rd)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">In-depth Analysis on Machine Learning Approaches: Techniques, Applications, and Trends</div>
+                <div class="pub-authors"><span class="pub-author-bold">Abdulhady Abas Abdullah</span>, NS Mohammed, M Khanzadi, SM Asaad, ZK Abdul</div>
+                <div class="pub-details">
+                    <span>ARO-THE SCIENTIFIC JOURNAL OF KOYA UNIVERSITY 13 (1), 190-202, 2025</span>
+                    <span class="pub-status status-published">Published (First author)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">A novel facial recognition technique with focus on masked faces</div>
+                <div class="pub-authors">Dana A. Abdullah, Dana R. Hamad, Ismail Y. Maolood, Hakem Beitollahi, Aso K. Ameen, Sirwan A. Aula, <span class="pub-author-bold">Abdulhady A. Abdullah</span>, Mohammed Y. Shakorf, Sabat S. Muhamad</div>
+                <div class="pub-details">
+                    <span>Ain Shams Engineering Journal 16 (5), 103350, 2025</span>
+                    <span class="pub-status status-published">Published (Co-author, 7th)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">Do Optimization Algorithms Hold the Key to Advancing AI and Machine Learning? A Comprehensive Meta-Analysis Review</div>
+                <div class="pub-authors">HM Ali, MY Hamza, TA Rashid, BA Hassan, <span class="pub-author-bold">Abdulhady Abas Abdullah</span></div>
+                <div class="pub-details">
+                    <span>2025</span>
+                    <span class="pub-status status-published">Published (Co-author, 5th)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">Backtracking Search Optimization Algorithm: A Practical Tutorial</div>
+                <div class="pub-authors">BA Hassan, AA Hassan, AM Ahmed, TA Rashid, <span class="pub-author-bold">Abdulhady Abas Abdullah</span></div>
+                <div class="pub-details">
+                    <span>Multi-objective Optimization Techniques, 119-132, 2025</span>
+                    <span class="pub-status status-published">Published (Co-author, 5th)</span>
+                </div>
+            </div>
+            
+            <!-- Published Papers (2024) -->
+            <div class="pub-card">
+                <div class="pub-title">Kurdish end-to-end speech synthesis using deep neural networks</div>
+                <div class="pub-authors">Sabat S. Muhamad, Hadi Veisi, Aso Mahmudi, <span class="pub-author-bold">Abdulhady Abas Abdullah</span>, Farhad Rahimi</div>
+                <div class="pub-details">
+                    <span>Natural Language Processing Journal 8, 100096, 2024</span>
+                    <span class="pub-status status-published">Published (Co-author, 4th)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">Effective Facial Expression Recognition System Using Artificial Intelligence Technique</div>
+                <div class="pub-authors">IS Yousif, TA Rashid, AS Shamsaldin, SA Abdulhameed, <span class="pub-author-bold">Abdulhady Abas Abdullah</span></div>
+                <div class="pub-details">
+                    <span>Kurdistan Journal of Applied Research 9 (2), 117-130, 2024</span>
+                    <span class="pub-status status-published">Published (Co-author, 5th)</span>
+                </div>
+            </div>
+            
+            <!-- Preprints (2025) -->
+            <div class="pub-card">
+                <div class="pub-title">From Dialect Gaps to Identity Maps: Tackling Variability in Speaker Verification</div>
+                <div class="pub-authors"><span class="pub-author-bold">Abdulhady Abas Abdullah</span>, S Badawi, DA Abdullah, DR Hamad, HA Taher</div>
+                <div class="pub-details">
+                    <span>arXiv preprint arXiv:2505.04629, 2025</span>
+                    <span class="pub-status status-preprint">Preprint (First author)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">Video Forgery Detection for Surveillance Cameras: A Review</div>
+                <div class="pub-authors">NB Tayfor, TA Rashid, SM Qader, BA Hassan, MH Abdalla, J Majidpour, <span class="pub-author-bold">Abdulhady Abas Abdullah</span></div>
+                <div class="pub-details">
+                    <span>arXiv preprint arXiv:2505.03832, 2025</span>
+                    <span class="pub-status status-preprint">Preprint (Co-author, 7th)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">Speaker Diarization for Low-Resource Languages Through Wav2vec Fine-Tuning</div>
+                <div class="pub-authors"><span class="pub-author-bold">Abdulhady Abas Abdullah</span>, SHT Karim, SA Ahmed, KR Tariq, TA Rashid</div>
+                <div class="pub-details">
+                    <span>arXiv preprint arXiv:2504.18582, 2025</span>
+                    <span class="pub-status status-preprint">Preprint (First author)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">A proposed chaotic dynamic cat swarm for the travelling salesman problem</div>
+                <div class="pub-authors">AM Ahmed, BA Hassan, AS Qosaeri, <span class="pub-author-bold">Abdulhady Abas Abdullah</span>, TA Rashid</div>
+                <div class="pub-details">
+                    <span>Authorea Preprints, 2025</span>
+                    <span class="pub-status status-preprint">Preprint (Co-author, 4th)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">Effect of Information Technology on Job Creation to Support Economic: Case Studies of Graduates in Universities (2023-2024) of the KRG of Iraq</div>
+                <div class="pub-authors">AK Bapir, IY Maolood, DA Abdullah, AK Ameen, <span class="pub-author-bold">Abdulhady Abas Abdullah</span></div>
+                <div class="pub-details">
+                    <span>arXiv preprint arXiv:2501.04438, 2025</span>
+                    <span class="pub-status status-preprint">Preprint (Co-author, 5th)</span>
+                </div>
+            </div>
+            
+            <!-- Preprints (2024) -->
+            <div class="pub-card">
+                <div class="pub-title">Breaking walls: Pioneering automatic speech recognition for Central Kurdish: End-to-end transformer paradigm</div>
+                <div class="pub-authors"><span class="pub-author-bold">Abdulhady Abas Abdullah</span>, H Veisi, T Rashid</div>
+                <div class="pub-details">
+                    <span>arXiv preprint arXiv:2406.02561, 2024</span>
+                    <span class="pub-status status-preprint">Preprint (First author)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">Optimizing feature selection with genetic algorithms: a review of methods and applications</div>
+                <div class="pub-authors">ZY Taha, <span class="pub-author-bold">Abdulhady Abas Abdullah</span>, TA Rashid</div>
+                <div class="pub-details">
+                    <span>arXiv preprint arXiv:2409.14563, 2024</span>
+                    <span class="pub-status status-preprint">Preprint (Co-author, 2nd)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">End-to-End Transformer-based Automatic Speech Recognition for Northern Kurdish: A Pioneering Approach</div>
+                <div class="pub-authors"><span class="pub-author-bold">Abdulhady Abas Abdullah</span>, S Tabibian, H Veisi, A Mahmudi, T Rashid</div>
+                <div class="pub-details">
+                    <span>arXiv preprint arXiv:2410.16330, 2024</span>
+                    <span class="pub-status status-preprint">Preprint (First author)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">NER-RoBERTa: Fine-Tuning RoBERTa for Named Entity Recognition (NER) within low-resource languages</div>
+                <div class="pub-authors"><span class="pub-author-bold">Abdulhady Abas Abdullah</span>, SH Abdulla, DM Toufiq, HS Maghdid, TA Rashid, PF Farho</div>
+                <div class="pub-details">
+                    <span>arXiv preprint arXiv:2412.15252, 2024</span>
+                    <span class="pub-status status-preprint">Preprint (First author)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">Advanced clustering techniques for speech signal enhancement: A review and metanalysis of fuzzy c-means, k-means, and kernel fuzzy c-means methods</div>
+                <div class="pub-authors"><span class="pub-author-bold">Abdulhady Abas Abdullah</span>, AM Ahmed, T Rashid, H Veisi, YH Rassul, B Hassan</div>
+                <div class="pub-details">
+                    <span>arXiv preprint arXiv:2409.19448, 2024</span>
+                    <span class="pub-status status-preprint">Preprint (First author)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">Enhancing Kurdish Text-to-Speech with Native Corpus Training: A High-Quality WaveGlow Vocoder Approach</div>
+                <div class="pub-authors"><span class="pub-author-bold">Abdulhady Abas Abdullah</span>, SS Muhamad, H Veisi</div>
+                <div class="pub-details">
+                    <span>arXiv preprint arXiv:2409.13734, 2024</span>
+                    <span class="pub-status status-preprint">Preprint (First author)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">Elevating Information System Performance: A Deep Dive into Quality Metrics</div>
+                <div class="pub-authors">DA Abdullah, HA Khidir, IY Maolood, AK Ameen, DR Hamad, HS Beitolahi, <span class="pub-author-bold">Abdulhady Abas Abdullah</span></div>
+                <div class="pub-details">
+                    <span>arXiv preprint arXiv:2412.18512, 2024</span>
+                    <span class="pub-status status-preprint">Preprint (Co-author, 7th)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">Unveiling Public Service and Prosocial Motivation Through Machine Learning Insights</div>
+                <div class="pub-authors">J Kabber, <span class="pub-author-bold">Abdulhady Abas Abdullah</span>, AM Ahmed, T Rashid</div>
+                <div class="pub-details">
+                    <span>2025 International Conference on Computer Science and Software Engineering, 2025</span>
+                    <span class="pub-status status-preprint">Preprint (Co-author, 2nd)</span>
+                </div>
+            </div>
+            
+            <!-- Published Papers (2022) -->
+            <div class="pub-card">
+                <div class="pub-title">Central Kurdish automatic speech recognition using deep learning</div>
+                <div class="pub-authors"><span class="pub-author-bold">Abdulhady Abas Abdullah</span>, Hadi Veisi</div>
+                <div class="pub-details">
+                    <span>Journal of the University of Anbar for Pure Science 16 (2), 108, 2022</span>
+                    <span class="pub-status status-published">Published (First author)</span>
+                </div>
+            </div>
+            
+            <!-- Under Review Papers -->
+            <div class="pub-card">
+                <div class="pub-title">LLaMA-Adapter+ MRP: Integrating Meta-Reasoning Prompting with LLaMA-Adapter for Efficient Multi-Modal and Task-Adaptive Reasoning</div>
+                <div class="pub-authors"><span class="pub-author-bold">Abdulhady Abas Abdullah</span> [Authors TBD]</div>
+                <div class="pub-details">
+                    <span>Under review at Berkeley Conference, 2025</span>
+                    <span class="pub-status status-review">Under Review (First author)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">UMP-Net: Uncertainty-Aware Mixture of Prompts Network for Efficient Instruction Tuning</div>
+                <div class="pub-authors"><span class="pub-author-bold">Abdulhady Abas Abdullah</span> [Authors TBD]</div>
+                <div class="pub-details">
+                    <span>Under review at TMLR, 2025</span>
+                    <span class="pub-status status-review">Under Review (First author)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">The Role of Orthographic Consistency in Multilingual Embedding Models for Text Classification in Arabic-Script Languages</div>
+                <div class="pub-authors"><span class="pub-author-bold">Abdulhady Abas Abdullah</span> [Authors TBD]</div>
+                <div class="pub-details">
+                    <span>Under review at Expert Systems With Applications</span>
+                    <span class="pub-status status-review">Under Review (First author)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">Building a Benchmark Named Entity Recognition Dataset for Sorani Kurdish: A Comparative Study of BiLSTM-CRF and Transformer-Based Models</div>
+                <div class="pub-authors"><span class="pub-author-bold">Abdulhady Abas Abdullah</span> [Authors TBD]</div>
+                <div class="pub-details">
+                    <span>Under review at Artificial Intelligence Review</span>
+                    <span class="pub-status status-review">Under Review (First author)</span>
+                </div>
+            </div>
+            
+            <div class="pub-card">
+                <div class="pub-title">A Comparative Review of Linear and Nonlinear Regression Techniques for Online Shopping Prediction</div>
+                <div class="pub-authors"><span class="pub-author-bold">Abdulhady Abas Abdullah</span> [Authors TBD]</div>
+                <div class="pub-details">
+                    <span>Under review at Neural Networks</span>
+                    <span class="pub-status status-review">Under Review (First author)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <section id="awards">
+            <div class="section-header">
+                <h2><i class="fas fa-award"></i> Awards and Honors</h2>
+                <i class="fas fa-trophy section-icon"></i>
+            </div>
+            <div class="section-content">
+                <div class="awards-container">
+                    <div class="award-card">
+                        <div class="award-icon"><i class="fas fa-medal"></i></div>
+                        <div class="award-title">First Place - HITEX AI Competition</div>
+                        <div class="award-year">2023</div>
+                        <p>Won 1st prize in international tech expo (participants from 21 countries) for developing Kurdish NLP/AI solutions</p>
+                    </div>
+                    
+                    <div class="award-card">
+                        <div class="award-icon"><i class="fas fa-trophy"></i></div>
+                        <div class="award-title">First Place - Rwanga Award, Software Category</div>
+                        <div class="award-year">2022</div>
+                        <p>Ranked 1st in Iraq's national awards for innovative software project in AI</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="languages">
+            <div class="section-header">
+                <h2><i class="fas fa-language"></i> Languages</h2>
+                <i class="fas fa-globe-asia section-icon"></i>
+            </div>
+            <div class="section-content">
+                <div class="languages">
+                    <div class="language-item">
+                        <i class="fas fa-language"></i>
+                        <span>Kurdish: Native</span>
+                    </div>
+                    <div class="language-item">
+                        <i class="fas fa-language"></i>
+                        <span>English: Professional proficiency (fluent)</span>
+                    </div>
+                    <div class="language-item">
+                        <i class="fas fa-language"></i>
+                        <span>Arabic: Working proficiency</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="accounts">
+            <div class="section-header">
+                <h2><i class="fas fa-globe"></i> Online Profiles</h2>
+                <i class="fas fa-link section-icon"></i>
+            </div>
+            <div class="section-content">
+                <div class="accounts-container">
+                    <!-- Google Scholar -->
+                    <div class="account-card">
+                        <div class="account-icon google-scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="account-title">Google Scholar</div>
+                        <a href="https://scholar.google.com/citations?user=fxIiXlMAAAAJ&hl=en&oi=ao" class="account-link" target="_blank">
+                            scholar.google.com/citations?user=fxIiXlMAAAAJ
+                        </a>
+                        <div class="account-description">Academic publications and citations</div>
+                    </div>
+                    
+                    <!-- LinkedIn -->
+                    <div class="account-card">
+                        <div class="account-icon linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="account-title">LinkedIn</div>
+                        <a href="https://www.linkedin.com/in/abdulhady-aabas-364140308/" class="account-link" target="_blank">
+                            linkedin.com/in/abdulhady-aabas-364140308
+                        </a>
+                        <div class="account-description">Professional network and experience</div>
+                    </div>
+                    
+                    <!-- ORCID -->
+                    <div class="account-card">
+                        <div class="account-icon orcid">
+                            <i class="fab fa-orcid"></i>
+                        </div>
+                        <div class="account-title">ORCID</div>
+                        <a href="https://orcid.org/0009-0007-5508-9371" class="account-link" target="_blank">
+                            orcid.org/0009-0007-5508-9371
+                        </a>
+                        <div class="account-description">Researcher identification profile</div>
+                    </div>
+                    
+                    <!-- Hugging Face -->
+                    <div class="account-card">
+                        <div class="account-icon huggingface">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="account-title">Hugging Face</div>
+                        <a href="https://huggingface.co/abdulhade" class="account-link" target="_blank">
+                            huggingface.co/abdulhade
+                        </a>
+                        <div class="account-description">AI models and repositories</div>
+                    </div>
+                    
+                    <!-- GitHub -->
+                    <div class="account-card">
+                        <div class="account-icon github">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="account-title">GitHub</div>
+                        <a href="https://github.com/abdulhadyabas2" class="account-link" target="_blank">
+                            github.com/abdulhadyabas2
+                        </a>
+                        <div class="account-description">Code repositories and projects</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="references">
+            <div class="section-header">
+                <h2><i class="fas fa-address-card"></i> References</h2>
+                <i class="fas fa-users section-icon"></i>
+            </div>
+            <div class="section-content">
+                <div class="references">
+                    <div class="reference-card">
+                        <div class="ref-name">Moloud Abdar</div>
+                        <div class="ref-title">Senior Data Scientist, The University of Queensland, Brisbane, Australia</div>
+                        <div class="ref-email">mabdar@uq.edu.au</div>
+                    </div>
+                    
+                    <div class="reference-card">
+                        <div class="ref-name">Prof. Dr. Tarik A. Rashid</div>
+                        <div class="ref-title">Professor of Computer Science and Director of AI and Innovation Centre, University of Kurdistan Hewlêr, Erbil, Iraq</div>
+                        <div class="ref-email">tarik.rashid@ukh.edu.krd</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Abdulhady Abas Abdullah, M.Sc. | Research Professional in Artificial Intelligence</p>
+            <p>Last Updated: July 2025 | Google Scholar: <a href="https://scholar.google.com/citations?user=fxIiXlMAAAAJ&hl=en&oi=ao" target="_blank">https://scholar.google.com/citations?user=fxIiXlMAAAAJ</a></p>
+        </footer>
+    </div>
+</body>
+</html>
